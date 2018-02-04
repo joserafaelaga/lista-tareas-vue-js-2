@@ -19,6 +19,8 @@
 <body>
 	<div id="app">
 		{{ titulo }}
+		<input type="text" placeholder="Escribe una nueva tarea" v-model="nuevaTarea">
+		<button type="button" v-on:click="agregarTarea()">Agregar</button>
 		<ul>	
 			<li v-for="tarea in tareas">	
 				{{ tarea.texto }}

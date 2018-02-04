@@ -17,7 +17,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
-	
+	<div id="app">
+		{{ titulo }}
+		<ul>	
+			<li v-for="tarea in tareas">	
+				{{ tarea.texto }}
+			</li>
+		</ul>
+	</div>
 	
 	<script src="vue.js"></script>
 </body>

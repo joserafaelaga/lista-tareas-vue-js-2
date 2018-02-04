@@ -28,6 +28,9 @@ var app = new Vue({
 				});
 			}
 			this.nuevaTarea= '';
+		},
+		borrarTarea: function(indice){
+			this.tareas.splice(indice,1);
 		}
 	}
 })

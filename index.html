@@ -30,13 +30,14 @@
 		</div>
 		
 		<ul class="list-group">	
-			<li class="list-group-item" v-bind:class="{terminada: tarea.terminada}" v-for="tarea in tareas">	
+			<li class="list-group-item" v-bind:class="{terminada: tarea.terminada}" v-for="(tarea,indice) in tareas">	
 				{{ tarea.texto }}
 				<span class="pull-right">
 				<button type="button" class="btn btn-success btn-xs glyphicon glyphicon-ok" v-on:click="tarea.terminada = !tarea.terminada">
-				
 				</button>
-			</span>
+				<button type="button" class="btn btn-danger btn-xs glyphicon glyphicon-remove" v-on:click="borrarTarea(indice)">
+				</button>
+				</span>
 			</li>
 			
 			
